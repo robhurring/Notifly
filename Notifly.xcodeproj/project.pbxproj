@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4858C4416A60FF8003DD16F /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D4858C4316A60FF8003DD16F /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D494883C16A5E5C900FC6FAD /* ZURLEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D494883B16A5E5C900FC6FAD /* ZURLEvent.m */; };
+		D494884016A5E65B00FC6FAD /* ZNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D494883F16A5E65B00FC6FAD /* ZNotificationController.m */; };
+		D4FD976B16A5D11400311D59 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FD976A16A5D11400311D59 /* Cocoa.framework */; };
+		D4FD977516A5D11400311D59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4FD977316A5D11400311D59 /* InfoPlist.strings */; };
+		D4FD977716A5D11400311D59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD977616A5D11400311D59 /* main.m */; };
+		D4FD977B16A5D11400311D59 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D4FD977916A5D11400311D59 /* Credits.rtf */; };
+		D4FD977E16A5D11400311D59 /* ZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD977D16A5D11400311D59 /* ZAppDelegate.m */; };
+		D4FD978116A5D11400311D59 /* App.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4FD977F16A5D11400311D59 /* App.xib */; };
+		D4FD978816A5D1E200311D59 /* Notifly_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FD978716A5D1E200311D59 /* Notifly_Icon.png */; };
+		D4FD978F16A5DB3F00311D59 /* ZURLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD978E16A5DB3F00311D59 /* ZURLUtils.m */; };
+		D4FD979816A5E22B00311D59 /* ZEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD979716A5E22B00311D59 /* ZEventController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D4858C4216A60FE7003DD16F /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		D4858C4316A60FF8003DD16F /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		D494883A16A5E5C900FC6FAD /* ZURLEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZURLEvent.h; sourceTree = "<group>"; };
+		D494883B16A5E5C900FC6FAD /* ZURLEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZURLEvent.m; sourceTree = "<group>"; };
+		D494883E16A5E65B00FC6FAD /* ZNotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNotificationController.h; sourceTree = "<group>"; };
+		D494883F16A5E65B00FC6FAD /* ZNotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNotificationController.m; sourceTree = "<group>"; };
+		D4FD976616A5D11400311D59 /* Notifly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notifly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4FD976A16A5D11400311D59 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D4FD976D16A5D11400311D59 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D4FD976E16A5D11400311D59 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D4FD976F16A5D11400311D59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D4FD977216A5D11400311D59 /* Notifly-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Notifly-Info.plist"; sourceTree = "<group>"; };
+		D4FD977416A5D11400311D59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D4FD977616A5D11400311D59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4FD977816A5D11400311D59 /* Notifly-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Notifly-Prefix.pch"; sourceTree = "<group>"; };
+		D4FD977A16A5D11400311D59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D4FD977C16A5D11400311D59 /* ZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAppDelegate.h; sourceTree = "<group>"; };
+		D4FD977D16A5D11400311D59 /* ZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAppDelegate.m; sourceTree = "<group>"; };
+		D4FD978016A5D11400311D59 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/App.xib; sourceTree = "<group>"; };
+		D4FD978716A5D1E200311D59 /* Notifly_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Notifly_Icon.png; path = ../Notifly_Icon.png; sourceTree = "<group>"; };
+		D4FD978D16A5DB3F00311D59 /* ZURLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZURLUtils.h; sourceTree = "<group>"; };
+		D4FD978E16A5DB3F00311D59 /* ZURLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZURLUtils.m; sourceTree = "<group>"; };
+		D4FD979616A5E22B00311D59 /* ZEventController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEventController.h; sourceTree = "<group>"; };
+		D4FD979716A5E22B00311D59 /* ZEventController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEventController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4FD976316A5D11400311D59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FD976B16A5D11400311D59 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4FD975B16A5D11400311D59 = {
+			isa = PBXGroup;
+			children = (
+				D4FD977016A5D11400311D59 /* Notifly */,
+				D4FD976916A5D11400311D59 /* Frameworks */,
+				D4FD976716A5D11400311D59 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4FD976716A5D11400311D59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4FD976616A5D11400311D59 /* Notifly.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4FD976916A5D11400311D59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4FD976A16A5D11400311D59 /* Cocoa.framework */,
+				D4FD976C16A5D11400311D59 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4FD976C16A5D11400311D59 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4FD976D16A5D11400311D59 /* AppKit.framework */,
+				D4FD976E16A5D11400311D59 /* CoreData.framework */,
+				D4FD976F16A5D11400311D59 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D4FD977016A5D11400311D59 /* Notifly */ = {
+			isa = PBXGroup;
+			children = (
+				D4FD977C16A5D11400311D59 /* ZAppDelegate.h */,
+				D4FD977D16A5D11400311D59 /* ZAppDelegate.m */,
+				D4FD979416A5E1E300311D59 /* Controllers */,
+				D4FD978C16A5DB2300311D59 /* Lib */,
+				D4FD978B16A5D26A00311D59 /* Views */,
+				D4FD977116A5D11400311D59 /* Supporting Files */,
+			);
+			path = Notifly;
+			sourceTree = "<group>";
+		};
+		D4FD977116A5D11400311D59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4FD978716A5D1E200311D59 /* Notifly_Icon.png */,
+				D4FD977216A5D11400311D59 /* Notifly-Info.plist */,
+				D4FD977316A5D11400311D59 /* InfoPlist.strings */,
+				D4FD977616A5D11400311D59 /* main.m */,
+				D4FD977816A5D11400311D59 /* Notifly-Prefix.pch */,
+				D4FD977916A5D11400311D59 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4FD978B16A5D26A00311D59 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4FD977F16A5D11400311D59 /* App.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D4FD978C16A5DB2300311D59 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				D4FD978D16A5DB3F00311D59 /* ZURLUtils.h */,
+				D4FD978E16A5DB3F00311D59 /* ZURLUtils.m */,
+				D494883A16A5E5C900FC6FAD /* ZURLEvent.h */,
+				D494883B16A5E5C900FC6FAD /* ZURLEvent.m */,
+				D4858C4216A60FE7003DD16F /* JSONKit.h */,
+				D4858C4316A60FF8003DD16F /* JSONKit.m */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		D4FD979416A5E1E300311D59 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4FD979616A5E22B00311D59 /* ZEventController.h */,
+				D4FD979716A5E22B00311D59 /* ZEventController.m */,
+				D494883E16A5E65B00FC6FAD /* ZNotificationController.h */,
+				D494883F16A5E65B00FC6FAD /* ZNotificationController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4FD976516A5D11400311D59 /* Notifly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4FD978416A5D11400311D59 /* Build configuration list for PBXNativeTarget "Notifly" */;
+			buildPhases = (
+				D4FD976216A5D11400311D59 /* Sources */,
+				D4FD976316A5D11400311D59 /* Frameworks */,
+				D4FD976416A5D11400311D59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Notifly;
+			productName = Notifly;
+			productReference = D4FD976616A5D11400311D59 /* Notifly.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4FD975D16A5D11400311D59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Z;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = rob;
+			};
+			buildConfigurationList = D4FD976016A5D11400311D59 /* Build configuration list for PBXProject "Notifly" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D4FD975B16A5D11400311D59;
+			productRefGroup = D4FD976716A5D11400311D59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4FD976516A5D11400311D59 /* Notifly */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4FD976416A5D11400311D59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FD977516A5D11400311D59 /* InfoPlist.strings in Resources */,
+				D4FD977B16A5D11400311D59 /* Credits.rtf in Resources */,
+				D4FD978116A5D11400311D59 /* App.xib in Resources */,
+				D4FD978816A5D1E200311D59 /* Notifly_Icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4FD976216A5D11400311D59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FD977716A5D11400311D59 /* main.m in Sources */,
+				D4FD977E16A5D11400311D59 /* ZAppDelegate.m in Sources */,
+				D4FD978F16A5DB3F00311D59 /* ZURLUtils.m in Sources */,
+				D4FD979816A5E22B00311D59 /* ZEventController.m in Sources */,
+				D494883C16A5E5C900FC6FAD /* ZURLEvent.m in Sources */,
+				D494884016A5E65B00FC6FAD /* ZNotificationController.m in Sources */,
+				D4858C4416A60FF8003DD16F /* JSONKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4FD977316A5D11400311D59 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4FD977416A5D11400311D59 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D4FD977916A5D11400311D59 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4FD977A16A5D11400311D59 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		D4FD977F16A5D11400311D59 /* App.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4FD978016A5D11400311D59 /* en */,
+			);
+			name = App.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4FD978216A5D11400311D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D4FD978316A5D11400311D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D4FD978516A5D11400311D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Notifly/Notifly-Prefix.pch";
+				INFOPLIST_FILE = "Notifly/Notifly-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D4FD978616A5D11400311D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Notifly/Notifly-Prefix.pch";
+				INFOPLIST_FILE = "Notifly/Notifly-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4FD976016A5D11400311D59 /* Build configuration list for PBXProject "Notifly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4FD978216A5D11400311D59 /* Debug */,
+				D4FD978316A5D11400311D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4FD978416A5D11400311D59 /* Build configuration list for PBXNativeTarget "Notifly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4FD978516A5D11400311D59 /* Debug */,
+				D4FD978616A5D11400311D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4FD975D16A5D11400311D59 /* Project object */;
+}
