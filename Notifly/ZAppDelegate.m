@@ -64,8 +64,6 @@
     }else{
         NSLog(@"Unknown event name: %@", event.eventName);
     }
-  
-    [[NSDistributedNotificationCenter defaultCenter] postNotificationName:kNotiflyNotificationName object:event.eventName];
 }
 
 @end

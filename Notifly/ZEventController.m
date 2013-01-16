@@ -39,6 +39,11 @@ static ZEventController *sharedInstance;
     ZURLEvent *event = [[ZURLEvent alloc]
                         initWithEventDescriptor:eventDescriptor];
     
+    [[NSDistributedNotificationCenter defaultCenter]
+     postNotificationName:kNotiflyNotificationName
+     object:event.eventName
+     userInfo:event.options];
+    
     [delegate handleURLEvent:event];
 }
 
