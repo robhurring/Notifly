@@ -99,7 +99,7 @@
            "\n"
     );
     
-    exit(1);
+    exit(0);
 }
 
 - (void)parseArgs
@@ -114,6 +114,38 @@
     
     NSUserDefaults *args = [NSUserDefaults standardUserDefaults];
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+
+    NSArray *processArgs = [[NSProcessInfo processInfo] arguments];
+    
+    BOOL showHelp = NO;
+    BOOL showVersion = NO;
+    
+    for(NSString *arg in processArgs)
+    {
+        if([arg isEqualToString:@"-h"] || [arg isEqualToString:@"-help"] || [arg isEqualToString:@"--help"])
+        {
+            showHelp = YES;
+            break;
+        }
+        
+        if([arg isEqualToString:@"-v"] || [arg isEqualToString:@"-version"] || [arg isEqualToString:@"--version"])
+        {
+            showVersion = YES;
+            break;
+        }        
+    }
+    
+    if(showHelp)
+    {
+        [self printUsage];
+    }
+    
+    if(showVersion)
+    {
+        const char *version = [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] UTF8String];
+        printf("Version %s", version);
+        exit(0);
+    }
 
     for(NSString *key in valueArgs)
     {
