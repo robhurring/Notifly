@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D40FA8916A6635E001D99EE /* ZConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D40FA8816A6635E001D99EE /* ZConstants.m */; };
 		D4858C4416A60FF8003DD16F /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D4858C4316A60FF8003DD16F /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D494883C16A5E5C900FC6FAD /* ZURLEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D494883B16A5E5C900FC6FAD /* ZURLEvent.m */; };
 		D494884016A5E65B00FC6FAD /* ZNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D494883F16A5E65B00FC6FAD /* ZNotificationController.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D40FA8716A6635E001D99EE /* ZConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZConstants.h; sourceTree = "<group>"; };
+		9D40FA8816A6635E001D99EE /* ZConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZConstants.m; sourceTree = "<group>"; };
 		D4858C4216A60FE7003DD16F /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		D4858C4316A60FF8003DD16F /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		D494883A16A5E5C900FC6FAD /* ZURLEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZURLEvent.h; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				D494883B16A5E5C900FC6FAD /* ZURLEvent.m */,
 				D4858C4216A60FE7003DD16F /* JSONKit.h */,
 				D4858C4316A60FF8003DD16F /* JSONKit.m */,
+				9D40FA8716A6635E001D99EE /* ZConstants.h */,
+				9D40FA8816A6635E001D99EE /* ZConstants.m */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 				D494883C16A5E5C900FC6FAD /* ZURLEvent.m in Sources */,
 				D494884016A5E65B00FC6FAD /* ZNotificationController.m in Sources */,
 				D4858C4416A60FF8003DD16F /* JSONKit.m in Sources */,
+				9D40FA8916A6635E001D99EE /* ZConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
