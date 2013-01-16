@@ -17,5 +17,6 @@
                              userInfo:(NSDictionary *)userInfo;
 
 - (void)start;
+- (void)stop;
 @end
 

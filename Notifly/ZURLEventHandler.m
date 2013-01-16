@@ -9,6 +9,8 @@
 #import "ZURLEventHandler.h"
 #import "ZURLEvent.h"
 
+static BOOL initialized = NO;
+
 @implementation ZURLEventHandler
 @synthesize delegate;
 
@@ -25,8 +27,6 @@
 
 - (void)start
 {
-    static BOOL initialized = NO;
-    
     if(!initialized)
     {
         [[NSAppleEventManager sharedAppleEventManager]
@@ -36,6 +36,16 @@
          andEventID:kAEGetURL];
         
         initialized = YES;
+    }
+}
+
+- (void)stop
+{
+    if(initialized)
+    {
+        [[NSAppleEventManager sharedAppleEventManager]
+         removeEventHandlerForEventClass:kInternetEventClass
+         andEventID:kAEGetURL];
     }
 }
 

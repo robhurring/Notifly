@@ -45,8 +45,10 @@
 
 - (void)applicationWillTerminate:(NSNotification *)notification
 {
+    [eventHandler stop];
+    
     if(!self.cliMode)
-    {        
+    {
         [self detachMenu];
     }
 }

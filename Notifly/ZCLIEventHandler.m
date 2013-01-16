@@ -41,6 +41,10 @@
     }
 }
 
+- (void)stop
+{
+}
+
 - (ZURLEvent *)buildEventFromArgs:(NSString **)errorMessage
 {
     ZURLEvent *event = [[ZURLEvent alloc] init];
