@@ -13,6 +13,7 @@
 		D494884016A5E65B00FC6FAD /* ZNotificationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D494883F16A5E65B00FC6FAD /* ZNotificationHandler.m */; };
 		D4B4AC0916A6F5F70081F27B /* Icon_On.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B4AC0816A6F5F70081F27B /* Icon_On.png */; };
 		D4B4AC0B16A6F61E0081F27B /* Icon_Active.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B4AC0A16A6F61E0081F27B /* Icon_Active.png */; };
+		D4B4AC0D16A6F8200081F27B /* Notification_Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4B4AC0C16A6F8200081F27B /* Notification_Icon.icns */; };
 		D4FD976B16A5D11400311D59 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FD976A16A5D11400311D59 /* Cocoa.framework */; };
 		D4FD977516A5D11400311D59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4FD977316A5D11400311D59 /* InfoPlist.strings */; };
 		D4FD977716A5D11400311D59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD977616A5D11400311D59 /* main.m */; };
@@ -34,6 +35,7 @@
 		D494883F16A5E65B00FC6FAD /* ZNotificationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNotificationHandler.m; sourceTree = "<group>"; };
 		D4B4AC0816A6F5F70081F27B /* Icon_On.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon_On.png; path = ../Icon_On.png; sourceTree = "<group>"; };
 		D4B4AC0A16A6F61E0081F27B /* Icon_Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon_Active.png; path = ../Icon_Active.png; sourceTree = "<group>"; };
+		D4B4AC0C16A6F8200081F27B /* Notification_Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Notification_Icon.icns; path = ../Notification_Icon.icns; sourceTree = "<group>"; };
 		D4FD976616A5D11400311D59 /* Notifly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notifly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FD976A16A5D11400311D59 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D4FD976D16A5D11400311D59 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				D4B4AC0A16A6F61E0081F27B /* Icon_Active.png */,
+				D4B4AC0C16A6F8200081F27B /* Notification_Icon.icns */,
 				D4B4AC0816A6F5F70081F27B /* Icon_On.png */,
 				D4FD977216A5D11400311D59 /* Notifly-Info.plist */,
 				D4FD977316A5D11400311D59 /* InfoPlist.strings */,
@@ -219,6 +222,7 @@
 				D4FD978116A5D11400311D59 /* App.xib in Resources */,
 				D4B4AC0916A6F5F70081F27B /* Icon_On.png in Resources */,
 				D4B4AC0B16A6F61E0081F27B /* Icon_Active.png in Resources */,
+				D4B4AC0D16A6F8200081F27B /* Notification_Icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,7 +23,7 @@
     self.notificationController = [[ZNotificationHandler alloc]
                                    initWithDelegate:self];
     self.eventController = [ZEventHandler initialize];
-    self.eventController.delegate = self;  
+    self.eventController.delegate = self;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification
