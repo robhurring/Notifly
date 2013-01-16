@@ -34,6 +34,19 @@ open "notifly://publish?title=hello&body=world&open=http://google.com"
 open "notifly://publish?title=hello&body=world&perform=sudo rm -rf /"
 
 ```
+## Global Notifcations
+If you'd like to have a callback after a notification is posted, listen for events from com.zerobased.notifly.
+
+For example:
+```
+// subscribe to notifly
+[[NSDistributedNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(myListenerSelector:)
+     name:@"com.zerobased.notifly"
+     object:nil];
+```
+The notification object will contain the name of the event that was sent.  Examples include publish, list, and, remove.
 
 ## Planned
 
