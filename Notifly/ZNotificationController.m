@@ -43,14 +43,22 @@
 
 - (void)publishNotificationFromURLEvent:(ZURLEvent *)event
 {
-    NSString *title = [event.options objectForKey:@"title"];
-    NSString *subtitle = [event.options objectForKey:@"subtitle"];
-    NSString *message = [event.options objectForKey:@"message"];
+    NSMutableDictionary *options = [NSMutableDictionary
+                                    dictionaryWithDictionary:event.options];
+    
+    NSString *title = [options objectForKey:@"title"];
+    [options removeObjectForKey:@"title"];
+    
+    NSString *subtitle = [options objectForKey:@"subtitle"];
+    [options removeObjectForKey:@"subtitle"];
+    
+    NSString *message = [options objectForKey:@"message"];
+    [options removeObjectForKey:@"message"];
     
     [self publishNotificationWithTitle:title
                               subtitle:subtitle
                                message:message
-                               options:event.options];
+                               options:options];
 }
 
 - (void)removeNotificationsFromURLEvent:(ZURLEvent *)event
@@ -104,10 +112,10 @@
 {
     NSUserNotification *notification = [NSUserNotification new];
     
-    notification.title = (title ? title : @"");
-    notification.subtitle = (subtitle ? subtitle : @"");
-    notification.informativeText = (message ? message : @"");
-    notification.userInfo = (options ? options : [NSDictionary dictionary]);
+    notification.title = title;
+    notification.subtitle = subtitle;
+    notification.informativeText = message;
+    notification.userInfo = options;
     
     [notificationCenter scheduleNotification:notification];
 }
@@ -128,14 +136,30 @@
     
     for(NSUserNotification *notification in notifications)
     {
-        // TODO: fix nils here
+        NSMutableDictionary *meta = [NSMutableDictionary
+                                     dictionaryWithDictionary:notification.userInfo];
+        
+        NSString *title = notification.title;
+        NSString *subtitle = notification.subtitle;
+        NSString *message = notification.informativeText;
+        NSString *group = [meta objectForKey:@"group"];
+        [meta removeObjectForKey:@"group"];
+        
+        NSString *delivered = [notification.deliveryDate description];
+
+        if(!message)    message = @"";
+        if(!title)      title = @"";
+        if(!subtitle)   subtitle = @"";
+        if(!group)      group = @"";
+        if(!delivered)  delivered = @"";
+        
         NSDictionary *data = @{
-            @"title"    : notification.title,
-            @"subtitle" : notification.subtitle,
-            @"message"  : notification.informativeText,
-            @"group"    : [notification.userInfo objectForKey:@"group"],
-            @"delivered": [notification.deliveryDate description],
-            @"data"     : notification.userInfo
+            @"title"    : title,
+            @"subtitle" : subtitle,
+            @"message"  : message,
+            @"group"    : group,
+            @"delivered": delivered,
+            @"meta"     : meta
         };
         
         [lines addObject:data];
