@@ -23,7 +23,7 @@
     self.notificationController = [[ZNotificationController alloc]
                                    initWithDelegate:self];
     self.eventController = [ZEventController initialize];
-    self.eventController.delegate = self;
+    self.eventController.delegate = self;  
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification
@@ -64,6 +64,8 @@
     }else{
         NSLog(@"Unknown event name: %@", event.eventName);
     }
+  
+    [[NSDistributedNotificationCenter defaultCenter] postNotificationName:kNotiflyNotificationName object:event.eventName];
 }
 
 @end
