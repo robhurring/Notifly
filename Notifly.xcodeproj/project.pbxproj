@@ -17,7 +17,6 @@
 		D4FD976B16A5D11400311D59 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FD976A16A5D11400311D59 /* Cocoa.framework */; };
 		D4FD977516A5D11400311D59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4FD977316A5D11400311D59 /* InfoPlist.strings */; };
 		D4FD977716A5D11400311D59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD977616A5D11400311D59 /* main.m */; };
-		D4FD977B16A5D11400311D59 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D4FD977916A5D11400311D59 /* Credits.rtf */; };
 		D4FD977E16A5D11400311D59 /* ZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD977D16A5D11400311D59 /* ZAppDelegate.m */; };
 		D4FD978116A5D11400311D59 /* App.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4FD977F16A5D11400311D59 /* App.xib */; };
 		D4FD978F16A5DB3F00311D59 /* ZURLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD978E16A5DB3F00311D59 /* ZURLUtils.m */; };
@@ -45,7 +44,6 @@
 		D4FD977416A5D11400311D59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D4FD977616A5D11400311D59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4FD977816A5D11400311D59 /* Notifly-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Notifly-Prefix.pch"; sourceTree = "<group>"; };
-		D4FD977A16A5D11400311D59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D4FD977C16A5D11400311D59 /* ZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAppDelegate.h; sourceTree = "<group>"; };
 		D4FD977D16A5D11400311D59 /* ZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAppDelegate.m; sourceTree = "<group>"; };
 		D4FD978016A5D11400311D59 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/App.xib; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 				D4FD977316A5D11400311D59 /* InfoPlist.strings */,
 				D4FD977616A5D11400311D59 /* main.m */,
 				D4FD977816A5D11400311D59 /* Notifly-Prefix.pch */,
-				D4FD977916A5D11400311D59 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -218,7 +215,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FD977516A5D11400311D59 /* InfoPlist.strings in Resources */,
-				D4FD977B16A5D11400311D59 /* Credits.rtf in Resources */,
 				D4FD978116A5D11400311D59 /* App.xib in Resources */,
 				D4B4AC0916A6F5F70081F27B /* Icon_On.png in Resources */,
 				D4B4AC0B16A6F61E0081F27B /* Icon_Active.png in Resources */,
@@ -253,14 +249,6 @@
 				D4FD977416A5D11400311D59 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D4FD977916A5D11400311D59 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4FD977A16A5D11400311D59 /* en */,
-			);
-			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 		D4FD977F16A5D11400311D59 /* App.xib */ = {
