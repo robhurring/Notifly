@@ -14,7 +14,7 @@
 - (void)handleURLEvent:(ZURLEvent *)event;
 @end
 
-@interface ZEventController : NSObject
+@interface ZEventHandler : NSObject
 
 @property (retain) id<ZEventControllerDelegate> delegate;
 

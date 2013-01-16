@@ -20,9 +20,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [self attachMenu];
-    self.notificationController = [[ZNotificationController alloc]
+    self.notificationController = [[ZNotificationHandler alloc]
                                    initWithDelegate:self];
-    self.eventController = [ZEventController initialize];
+    self.eventController = [ZEventHandler initialize];
     self.eventController.delegate = self;  
 }
 
@@ -34,7 +34,7 @@
 - (void)attachMenu
 {
     NSString *iconPath = [[NSBundle mainBundle]
-                          pathForImageResource:@"Notifly_Icon.png"];
+                          pathForImageResource:@"Icon_On.png"];
     
     NSImage *menuImage = [[NSImage alloc] initWithContentsOfFile:iconPath];
     

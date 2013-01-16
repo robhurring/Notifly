@@ -10,16 +10,17 @@
 		9D40FA8916A6635E001D99EE /* ZConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D40FA8816A6635E001D99EE /* ZConstants.m */; };
 		D4858C4416A60FF8003DD16F /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D4858C4316A60FF8003DD16F /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D494883C16A5E5C900FC6FAD /* ZURLEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D494883B16A5E5C900FC6FAD /* ZURLEvent.m */; };
-		D494884016A5E65B00FC6FAD /* ZNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D494883F16A5E65B00FC6FAD /* ZNotificationController.m */; };
+		D494884016A5E65B00FC6FAD /* ZNotificationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D494883F16A5E65B00FC6FAD /* ZNotificationHandler.m */; };
+		D4B4AC0916A6F5F70081F27B /* Icon_On.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B4AC0816A6F5F70081F27B /* Icon_On.png */; };
+		D4B4AC0B16A6F61E0081F27B /* Icon_Active.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B4AC0A16A6F61E0081F27B /* Icon_Active.png */; };
 		D4FD976B16A5D11400311D59 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FD976A16A5D11400311D59 /* Cocoa.framework */; };
 		D4FD977516A5D11400311D59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4FD977316A5D11400311D59 /* InfoPlist.strings */; };
 		D4FD977716A5D11400311D59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD977616A5D11400311D59 /* main.m */; };
 		D4FD977B16A5D11400311D59 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D4FD977916A5D11400311D59 /* Credits.rtf */; };
 		D4FD977E16A5D11400311D59 /* ZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD977D16A5D11400311D59 /* ZAppDelegate.m */; };
 		D4FD978116A5D11400311D59 /* App.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4FD977F16A5D11400311D59 /* App.xib */; };
-		D4FD978816A5D1E200311D59 /* Notifly_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FD978716A5D1E200311D59 /* Notifly_Icon.png */; };
 		D4FD978F16A5DB3F00311D59 /* ZURLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD978E16A5DB3F00311D59 /* ZURLUtils.m */; };
-		D4FD979816A5E22B00311D59 /* ZEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD979716A5E22B00311D59 /* ZEventController.m */; };
+		D4FD979816A5E22B00311D59 /* ZEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD979716A5E22B00311D59 /* ZEventHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +30,10 @@
 		D4858C4316A60FF8003DD16F /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		D494883A16A5E5C900FC6FAD /* ZURLEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZURLEvent.h; sourceTree = "<group>"; };
 		D494883B16A5E5C900FC6FAD /* ZURLEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZURLEvent.m; sourceTree = "<group>"; };
-		D494883E16A5E65B00FC6FAD /* ZNotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNotificationController.h; sourceTree = "<group>"; };
-		D494883F16A5E65B00FC6FAD /* ZNotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNotificationController.m; sourceTree = "<group>"; };
+		D494883E16A5E65B00FC6FAD /* ZNotificationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNotificationHandler.h; sourceTree = "<group>"; };
+		D494883F16A5E65B00FC6FAD /* ZNotificationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNotificationHandler.m; sourceTree = "<group>"; };
+		D4B4AC0816A6F5F70081F27B /* Icon_On.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon_On.png; path = ../Icon_On.png; sourceTree = "<group>"; };
+		D4B4AC0A16A6F61E0081F27B /* Icon_Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon_Active.png; path = ../Icon_Active.png; sourceTree = "<group>"; };
 		D4FD976616A5D11400311D59 /* Notifly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notifly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FD976A16A5D11400311D59 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D4FD976D16A5D11400311D59 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -44,11 +47,10 @@
 		D4FD977C16A5D11400311D59 /* ZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAppDelegate.h; sourceTree = "<group>"; };
 		D4FD977D16A5D11400311D59 /* ZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAppDelegate.m; sourceTree = "<group>"; };
 		D4FD978016A5D11400311D59 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/App.xib; sourceTree = "<group>"; };
-		D4FD978716A5D1E200311D59 /* Notifly_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Notifly_Icon.png; path = ../Notifly_Icon.png; sourceTree = "<group>"; };
 		D4FD978D16A5DB3F00311D59 /* ZURLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZURLUtils.h; sourceTree = "<group>"; };
 		D4FD978E16A5DB3F00311D59 /* ZURLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZURLUtils.m; sourceTree = "<group>"; };
-		D4FD979616A5E22B00311D59 /* ZEventController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEventController.h; sourceTree = "<group>"; };
-		D4FD979716A5E22B00311D59 /* ZEventController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEventController.m; sourceTree = "<group>"; };
+		D4FD979616A5E22B00311D59 /* ZEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEventHandler.h; sourceTree = "<group>"; };
+		D4FD979716A5E22B00311D59 /* ZEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEventHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +106,7 @@
 			children = (
 				D4FD977C16A5D11400311D59 /* ZAppDelegate.h */,
 				D4FD977D16A5D11400311D59 /* ZAppDelegate.m */,
-				D4FD979416A5E1E300311D59 /* Controllers */,
+				D4FD979416A5E1E300311D59 /* Handlers */,
 				D4FD978C16A5DB2300311D59 /* Lib */,
 				D4FD978B16A5D26A00311D59 /* Views */,
 				D4FD977116A5D11400311D59 /* Supporting Files */,
@@ -115,7 +117,8 @@
 		D4FD977116A5D11400311D59 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D4FD978716A5D1E200311D59 /* Notifly_Icon.png */,
+				D4B4AC0A16A6F61E0081F27B /* Icon_Active.png */,
+				D4B4AC0816A6F5F70081F27B /* Icon_On.png */,
 				D4FD977216A5D11400311D59 /* Notifly-Info.plist */,
 				D4FD977316A5D11400311D59 /* InfoPlist.strings */,
 				D4FD977616A5D11400311D59 /* main.m */,
@@ -148,15 +151,15 @@
 			name = Lib;
 			sourceTree = "<group>";
 		};
-		D4FD979416A5E1E300311D59 /* Controllers */ = {
+		D4FD979416A5E1E300311D59 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
-				D4FD979616A5E22B00311D59 /* ZEventController.h */,
-				D4FD979716A5E22B00311D59 /* ZEventController.m */,
-				D494883E16A5E65B00FC6FAD /* ZNotificationController.h */,
-				D494883F16A5E65B00FC6FAD /* ZNotificationController.m */,
+				D4FD979616A5E22B00311D59 /* ZEventHandler.h */,
+				D4FD979716A5E22B00311D59 /* ZEventHandler.m */,
+				D494883E16A5E65B00FC6FAD /* ZNotificationHandler.h */,
+				D494883F16A5E65B00FC6FAD /* ZNotificationHandler.m */,
 			);
-			name = Controllers;
+			name = Handlers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,7 +217,8 @@
 				D4FD977516A5D11400311D59 /* InfoPlist.strings in Resources */,
 				D4FD977B16A5D11400311D59 /* Credits.rtf in Resources */,
 				D4FD978116A5D11400311D59 /* App.xib in Resources */,
-				D4FD978816A5D1E200311D59 /* Notifly_Icon.png in Resources */,
+				D4B4AC0916A6F5F70081F27B /* Icon_On.png in Resources */,
+				D4B4AC0B16A6F61E0081F27B /* Icon_Active.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,9 +232,9 @@
 				D4FD977716A5D11400311D59 /* main.m in Sources */,
 				D4FD977E16A5D11400311D59 /* ZAppDelegate.m in Sources */,
 				D4FD978F16A5DB3F00311D59 /* ZURLUtils.m in Sources */,
-				D4FD979816A5E22B00311D59 /* ZEventController.m in Sources */,
+				D4FD979816A5E22B00311D59 /* ZEventHandler.m in Sources */,
 				D494883C16A5E5C900FC6FAD /* ZURLEvent.m in Sources */,
-				D494884016A5E65B00FC6FAD /* ZNotificationController.m in Sources */,
+				D494884016A5E65B00FC6FAD /* ZNotificationHandler.m in Sources */,
 				D4858C4416A60FF8003DD16F /* JSONKit.m in Sources */,
 				9D40FA8916A6635E001D99EE /* ZConstants.m in Sources */,
 			);

@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 rob. All rights reserved.
 //
 
-#import "ZEventController.h"
+#import "ZEventHandler.h"
 #import "ZURLEvent.h"
 
-@implementation ZEventController
+@implementation ZEventHandler
 @synthesize delegate;
 
-static ZEventController *sharedInstance;
+static ZEventHandler *sharedInstance;
 
 + (id)initialize
 {

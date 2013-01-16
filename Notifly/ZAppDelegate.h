@@ -7,15 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ZEventController.h"
-#import "ZNotificationController.h"
+#import "ZEventHandler.h"
+#import "ZNotificationHandler.h"
 
 @interface ZAppDelegate : NSObject <NSApplicationDelegate, ZEventControllerDelegate>
 
 @property (assign) IBOutlet NSMenu *mainMenu;
 
 @property (retain) NSStatusItem *statusItem;
-@property (retain) ZEventController *eventController;
-@property (retain) ZNotificationController *notificationController;
+@property (retain) ZEventHandler *eventController;
+@property (retain) ZNotificationHandler *notificationController;
 
 @end

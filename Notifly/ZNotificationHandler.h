@@ -10,7 +10,7 @@
 
 @class ZURLEvent;
 
-@interface ZNotificationController : NSObject <NSUserNotificationCenterDelegate>
+@interface ZNotificationHandler : NSObject <NSUserNotificationCenterDelegate>
 
 @property (retain) id delegate;
 @property (retain) NSUserNotificationCenter *notificationCenter;

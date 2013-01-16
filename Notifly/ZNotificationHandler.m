@@ -7,15 +7,15 @@
 //
 
 
-#import "ZNotificationController.h"
+#import "ZNotificationHandler.h"
 #import "ZURLEvent.h"
 #import "JSONKit.h"
 
-@interface ZNotificationController()
+@interface ZNotificationHandler()
 - (NSString *)JSONFormatNotification:(NSUserNotification *)notification;
 @end
 
-@implementation ZNotificationController
+@implementation ZNotificationHandler
 @synthesize delegate, notificationCenter;
 
 - (id)initWithDelegate:(id)theDelegate
