@@ -14,6 +14,13 @@
 		D4B4AC0916A6F5F70081F27B /* Icon_On.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B4AC0816A6F5F70081F27B /* Icon_On.png */; };
 		D4B4AC0B16A6F61E0081F27B /* Icon_Active.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B4AC0A16A6F61E0081F27B /* Icon_Active.png */; };
 		D4B4AC0D16A6F8200081F27B /* Notification_Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4B4AC0C16A6F8200081F27B /* Notification_Icon.icns */; };
+		D4B4AC7C16A7183D0081F27B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B4AC7B16A7183D0081F27B /* Foundation.framework */; };
+		D4B4AC7F16A7183D0081F27B /* notifly.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B4AC7E16A7183D0081F27B /* notifly.m */; };
+		D4B4AC8316A7183D0081F27B /* notifly.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4B4AC8216A7183D0081F27B /* notifly.1 */; };
+		D4B4AC8816A718C80081F27B /* ZURLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD978E16A5DB3F00311D59 /* ZURLUtils.m */; };
+		D4B4AC8916A718C80081F27B /* ZURLEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D494883B16A5E5C900FC6FAD /* ZURLEvent.m */; };
+		D4B4AC8A16A718D50081F27B /* ZNotificationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D494883F16A5E65B00FC6FAD /* ZNotificationHandler.m */; };
+		D4B4AC8E16A719E10081F27B /* notifly in Resources */ = {isa = PBXBuildFile; fileRef = D4B4AC7916A7183D0081F27B /* notifly */; };
 		D4FD976B16A5D11400311D59 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FD976A16A5D11400311D59 /* Cocoa.framework */; };
 		D4FD977516A5D11400311D59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4FD977316A5D11400311D59 /* InfoPlist.strings */; };
 		D4FD977716A5D11400311D59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD977616A5D11400311D59 /* main.m */; };
@@ -22,6 +29,38 @@
 		D4FD978F16A5DB3F00311D59 /* ZURLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD978E16A5DB3F00311D59 /* ZURLUtils.m */; };
 		D4FD979816A5E22B00311D59 /* ZEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD979716A5E22B00311D59 /* ZEventHandler.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4B4AC8B16A7199A0081F27B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4FD975D16A5D11400311D59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4B4AC7816A7183D0081F27B;
+			remoteInfo = notifly;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4B4AC7716A7183D0081F27B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				D4B4AC8316A7183D0081F27B /* notifly.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		D4B4AC8D16A719CF0081F27B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9D40FA8716A6635E001D99EE /* ZConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZConstants.h; sourceTree = "<group>"; };
@@ -35,6 +74,10 @@
 		D4B4AC0816A6F5F70081F27B /* Icon_On.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon_On.png; path = ../Icon_On.png; sourceTree = "<group>"; };
 		D4B4AC0A16A6F61E0081F27B /* Icon_Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon_Active.png; path = ../Icon_Active.png; sourceTree = "<group>"; };
 		D4B4AC0C16A6F8200081F27B /* Notification_Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Notification_Icon.icns; path = ../Notification_Icon.icns; sourceTree = "<group>"; };
+		D4B4AC7916A7183D0081F27B /* notifly */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = notifly; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4B4AC7B16A7183D0081F27B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D4B4AC7E16A7183D0081F27B /* notifly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = notifly.m; sourceTree = "<group>"; };
+		D4B4AC8216A7183D0081F27B /* notifly.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = notifly.1; sourceTree = "<group>"; };
 		D4FD976616A5D11400311D59 /* Notifly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notifly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FD976A16A5D11400311D59 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D4FD976D16A5D11400311D59 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -54,6 +97,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D4B4AC7616A7183D0081F27B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B4AC7C16A7183D0081F27B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4FD976316A5D11400311D59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,10 +116,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4B4AC7D16A7183D0081F27B /* notifly-cli */ = {
+			isa = PBXGroup;
+			children = (
+				D4B4AC7E16A7183D0081F27B /* notifly.m */,
+				D4B4AC8216A7183D0081F27B /* notifly.1 */,
+			);
+			name = "notifly-cli";
+			path = notifly;
+			sourceTree = "<group>";
+		};
 		D4FD975B16A5D11400311D59 = {
 			isa = PBXGroup;
 			children = (
 				D4FD977016A5D11400311D59 /* Notifly */,
+				D4B4AC7D16A7183D0081F27B /* notifly-cli */,
 				D4FD976916A5D11400311D59 /* Frameworks */,
 				D4FD976716A5D11400311D59 /* Products */,
 			);
@@ -78,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				D4FD976616A5D11400311D59 /* Notifly.app */,
+				D4B4AC7916A7183D0081F27B /* notifly */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				D4FD976A16A5D11400311D59 /* Cocoa.framework */,
+				D4B4AC7B16A7183D0081F27B /* Foundation.framework */,
 				D4FD976C16A5D11400311D59 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -165,6 +229,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D4B4AC7816A7183D0081F27B /* notifly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4B4AC8616A7183D0081F27B /* Build configuration list for PBXNativeTarget "notifly" */;
+			buildPhases = (
+				D4B4AC7516A7183D0081F27B /* Sources */,
+				D4B4AC7616A7183D0081F27B /* Frameworks */,
+				D4B4AC7716A7183D0081F27B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = notifly;
+			productName = notifly;
+			productReference = D4B4AC7916A7183D0081F27B /* notifly */;
+			productType = "com.apple.product-type.tool";
+		};
 		D4FD976516A5D11400311D59 /* Notifly */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4FD978416A5D11400311D59 /* Build configuration list for PBXNativeTarget "Notifly" */;
@@ -172,10 +253,12 @@
 				D4FD976216A5D11400311D59 /* Sources */,
 				D4FD976316A5D11400311D59 /* Frameworks */,
 				D4FD976416A5D11400311D59 /* Resources */,
+				D4B4AC8D16A719CF0081F27B /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D4B4AC8C16A7199A0081F27B /* PBXTargetDependency */,
 			);
 			name = Notifly;
 			productName = Notifly;
@@ -205,6 +288,7 @@
 			projectRoot = "";
 			targets = (
 				D4FD976516A5D11400311D59 /* Notifly */,
+				D4B4AC7816A7183D0081F27B /* notifly */,
 			);
 		};
 /* End PBXProject section */
@@ -214,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B4AC8E16A719E10081F27B /* notifly in Resources */,
 				D4FD977516A5D11400311D59 /* InfoPlist.strings in Resources */,
 				D4FD978116A5D11400311D59 /* App.xib in Resources */,
 				D4B4AC0916A6F5F70081F27B /* Icon_On.png in Resources */,
@@ -225,6 +310,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D4B4AC7516A7183D0081F27B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B4AC8A16A718D50081F27B /* ZNotificationHandler.m in Sources */,
+				D4B4AC8816A718C80081F27B /* ZURLUtils.m in Sources */,
+				D4B4AC8916A718C80081F27B /* ZURLEvent.m in Sources */,
+				D4B4AC7F16A7183D0081F27B /* notifly.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4FD976216A5D11400311D59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,6 +337,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4B4AC8C16A7199A0081F27B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4B4AC7816A7183D0081F27B /* notifly */;
+			targetProxy = D4B4AC8B16A7199A0081F27B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D4FD977316A5D11400311D59 /* InfoPlist.strings */ = {
@@ -262,6 +366,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D4B4AC8416A7183D0081F27B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "notifly/notifly-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D4B4AC8516A7183D0081F27B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "notifly/notifly-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		D4FD978216A5D11400311D59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -342,6 +464,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D4B4AC8616A7183D0081F27B /* Build configuration list for PBXNativeTarget "notifly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4B4AC8416A7183D0081F27B /* Debug */,
+				D4B4AC8516A7183D0081F27B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D4FD976016A5D11400311D59 /* Build configuration list for PBXProject "Notifly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
