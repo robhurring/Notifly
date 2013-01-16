@@ -128,12 +128,15 @@
     self.args = [NSDictionary dictionaryWithDictionary:dict];
 }
 
+// TODO: this is ghetto, fix it
 - (void)didDeliverNotification:(NSUserNotification *)notification
 {
-    if(cliMode)
-    {
-        exit(0);
-    }
+    if(cliMode) exit(0);    
+}
+
+- (void)didHandleUrlEvent:(ZURLEvent *)event
+{
+    if(cliMode) exit(0);
 }
 
 - (void)handleURLEvent:(ZURLEvent *)event

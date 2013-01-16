@@ -35,6 +35,7 @@
     
     if(!event)
     {
+        NSLog(@"Error: %@", errorMessage);
         [delegate handleFailedURLEvent:errorMessage];
     }else{
         [delegate handleURLEvent:event];
@@ -51,15 +52,16 @@
     
     event.eventName = [args objectForKey: @"event"];
 
+    NSString *channel   = [self.args objectForKey:@"channel"];
+    if(!channel)    channel = @"";
+
     if([event isPublishEvent])
     {
         NSString *title     = [self.args objectForKey:@"title"];
         NSString *subtitle  = [self.args objectForKey:@"subtitle"];
         NSString *message   = [self.args objectForKey:@"message"];
-        NSString *channel   = [self.args objectForKey:@"channel"];
         
         if(!subtitle)   subtitle = @"";
-        if(!channel)    channel = @"";
         
         if(!title)
         {
@@ -74,11 +76,16 @@
         }
         
         event.options = @{
-            @"title": title,
-            @"subtitle": subtitle,
-            @"message": message,
-            @"group": channel
+            @"title"    : title,
+            @"subtitle" : subtitle,
+            @"message"  : message,
+            @"channel"  : channel
         };
+    }else if([event isListEvent] || [event isRemoveEvent]){
+        event.options = @{@"channel" : channel};
+    }else{
+        *errorMessage = @"Unknown event name";
+        return nil;
     }
     
     return event;

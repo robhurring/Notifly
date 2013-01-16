@@ -59,28 +59,30 @@
 
 - (void)removeNotificationsFromURLEvent:(ZURLEvent *)event
 {
-    NSString *group = [event.options objectForKey:@"group"];
+    NSString *channel = [event.options objectForKey:@"channel"];
 
-    if([group isEqualToString:@""])
+    if([channel isEqualToString:@""])
     {
         [self removeAllNotifications];
     }else{
         for(NSUserNotification *notification in notificationCenter.deliveredNotifications)
         {
             NSDictionary *userInfo = notification.userInfo;
-            if([[userInfo objectForKey:@"group"] isEqualToString:group])
+            if([[userInfo objectForKey:@"channel"] isEqualToString:channel])
             {
                 [self removeNotification:notification];
             }
         }        
     }
+    
+    [delegate didHandleUrlEvent:event];
 }
 
 - (void)listNotificationsFromURLEvent:(ZURLEvent *)event
 {
-    NSString *group = [event.options objectForKey:@"group"];
+    NSString *channel = [event.options objectForKey:@"channel"];
     
-    if([group isEqualToString:@""])
+    if([channel isEqualToString:@""])
     {
         [self listNotifications:notificationCenter.deliveredNotifications];
     }else{
@@ -89,7 +91,7 @@
         for(NSUserNotification *notification in notificationCenter.deliveredNotifications)
         {
             NSDictionary *userInfo = notification.userInfo;
-            if([[userInfo objectForKey:@"group"] isEqualToString:group])
+            if([[userInfo objectForKey:@"channel"] isEqualToString:channel])
             {
                 [notifications addObject:notification];
             }
@@ -97,6 +99,8 @@
         
         [self listNotifications:[NSArray arrayWithArray:notifications]];
     }
+
+    [delegate didHandleUrlEvent:event];
 }
 
 #pragma mark Hooks
@@ -138,22 +142,22 @@
         NSString *title = notification.title;
         NSString *subtitle = notification.subtitle;
         NSString *message = notification.informativeText;
-        NSString *group = [meta objectForKey:@"group"];
-        [meta removeObjectForKey:@"group"];
+        NSString *channel = [meta objectForKey:@"channel"];
+        [meta removeObjectForKey:@"channel"];
         
         NSString *delivered = [notification.deliveryDate description];
 
         if(!message)    message = @"";
         if(!title)      title = @"";
         if(!subtitle)   subtitle = @"";
-        if(!group)      group = @"";
+        if(!channel)    channel = @"";
         if(!delivered)  delivered = @"";
         
         NSDictionary *data = @{
             @"title"    : title,
             @"subtitle" : subtitle,
             @"message"  : message,
-            @"group"    : group,
+            @"channel"  : channel,
             @"delivered": delivered,
             @"meta"     : meta
         };

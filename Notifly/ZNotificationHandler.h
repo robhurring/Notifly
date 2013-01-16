@@ -12,6 +12,7 @@
 
 @protocol ZNotificationHandlerDelegate <NSObject>
 - (void)didDeliverNotification:(NSUserNotification *)notification;
+- (void)didHandleUrlEvent:(ZURLEvent *)event;
 @end
 
 @interface ZNotificationHandler : NSObject <NSUserNotificationCenterDelegate>

@@ -25,7 +25,7 @@ static NSString *const kListEvent      = @"list";
 
         NSDictionary *queryDict = [ZURLUtils parseURLQuery:url.query];
         NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:queryDict];
-        [dict setValue:[NSString stringWithString:url.path] forKey:@"group"];
+        [dict setValue:[NSString stringWithString:url.path] forKey:@"channel"];
         
         self.eventName = url.host;
         self.options = [NSDictionary dictionaryWithDictionary:dict];
