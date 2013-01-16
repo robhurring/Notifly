@@ -6,31 +6,37 @@
 //  Copyright (c) 2013 rob. All rights reserved.
 //
 
-#import "ZEventHandler.h"
+#import "ZURLEventHandler.h"
 #import "ZURLEvent.h"
 
-@implementation ZEventHandler
+@implementation ZURLEventHandler
 @synthesize delegate;
 
-static ZEventHandler *sharedInstance;
+- (id<ZEventHandler>)initWithDelegate:(id<ZEventHandlerDelegate>)theDelegate
+                             userInfo:(NSDictionary *)userInfo
+{
+    if (self = [self init])
+    {
+        self.delegate = theDelegate;
+    }
+    
+    return self;
+}
 
-+ (id)initialize
+- (void)start
 {
     static BOOL initialized = NO;
-    if (initialized == NO)
+    
+    if(!initialized)
     {
-        sharedInstance = [[self alloc] init];
-
         [[NSAppleEventManager sharedAppleEventManager]
-         setEventHandler:sharedInstance
+         setEventHandler:self
          andSelector:@selector(handleURLEvent:withReplyEvent:)
          forEventClass:kInternetEventClass
          andEventID:kAEGetURL];
         
         initialized = YES;
     }
-
-    return sharedInstance;
 }
 
 - (void)handleURLEvent:(NSAppleEventDescriptor*)eventDescriptor

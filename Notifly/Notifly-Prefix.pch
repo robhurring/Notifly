@@ -1,8 +1,9 @@
 //
-// Prefix header for all source files of the 'Notifly' target in the 'Notifly' project
+// Prefix header for all source files of the 'notifly' target in the 'notifly' project
 //
 
 #ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
+    #import <Foundation/Foundation.h>
     #import "ZConstants.h"
+    #import "ZProtocols.h"
 #endif

@@ -9,9 +9,9 @@
 #import "ZURLEvent.h"
 #import "ZURLUtils.h"
 
-static NSString * const kPublishEvent   = @"publish";
-static NSString * const kRemoveEvent    = @"remove";
-static NSString * const kListEvent      = @"list";
+static NSString *const kPublishEvent   = @"publish";
+static NSString *const kRemoveEvent    = @"remove";
+static NSString *const kListEvent      = @"list";
 
 @implementation ZURLEvent
 @synthesize eventName, options;

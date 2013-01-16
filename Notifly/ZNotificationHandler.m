@@ -11,10 +11,6 @@
 #import "ZURLEvent.h"
 #import "JSONKit.h"
 
-@interface ZNotificationHandler()
-- (NSString *)JSONFormatNotification:(NSUserNotification *)notification;
-@end
-
 @implementation ZNotificationHandler
 @synthesize delegate, notificationCenter;
 
@@ -173,6 +169,7 @@
 - (void)userNotificationCenter:(NSUserNotificationCenter *)center
         didDeliverNotification:(NSUserNotification *)notification
 {
+    [delegate didDeliverNotification:notification];
 }
 
 - (void)userNotificationCenter:(NSUserNotificationCenter *)center

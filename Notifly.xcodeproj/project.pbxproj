@@ -14,14 +14,27 @@
 		D4B4AC0916A6F5F70081F27B /* Icon_On.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B4AC0816A6F5F70081F27B /* Icon_On.png */; };
 		D4B4AC0B16A6F61E0081F27B /* Icon_Active.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B4AC0A16A6F61E0081F27B /* Icon_Active.png */; };
 		D4B4AC0D16A6F8200081F27B /* Notification_Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4B4AC0C16A6F8200081F27B /* Notification_Icon.icns */; };
+		D4B4AC9616A7433C0081F27B /* ZCLIEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B4AC9516A7433C0081F27B /* ZCLIEventHandler.m */; };
 		D4FD976B16A5D11400311D59 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FD976A16A5D11400311D59 /* Cocoa.framework */; };
 		D4FD977516A5D11400311D59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4FD977316A5D11400311D59 /* InfoPlist.strings */; };
 		D4FD977716A5D11400311D59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD977616A5D11400311D59 /* main.m */; };
 		D4FD977E16A5D11400311D59 /* ZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD977D16A5D11400311D59 /* ZAppDelegate.m */; };
 		D4FD978116A5D11400311D59 /* App.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4FD977F16A5D11400311D59 /* App.xib */; };
 		D4FD978F16A5DB3F00311D59 /* ZURLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD978E16A5DB3F00311D59 /* ZURLUtils.m */; };
-		D4FD979816A5E22B00311D59 /* ZEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD979716A5E22B00311D59 /* ZEventHandler.m */; };
+		D4FD979816A5E22B00311D59 /* ZURLEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FD979716A5E22B00311D59 /* ZURLEventHandler.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4B4AC8D16A719CF0081F27B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9D40FA8716A6635E001D99EE /* ZConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZConstants.h; sourceTree = "<group>"; };
@@ -35,6 +48,10 @@
 		D4B4AC0816A6F5F70081F27B /* Icon_On.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon_On.png; path = ../Icon_On.png; sourceTree = "<group>"; };
 		D4B4AC0A16A6F61E0081F27B /* Icon_Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon_Active.png; path = ../Icon_Active.png; sourceTree = "<group>"; };
 		D4B4AC0C16A6F8200081F27B /* Notification_Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Notification_Icon.icns; path = ../Notification_Icon.icns; sourceTree = "<group>"; };
+		D4B4AC7B16A7183D0081F27B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D4B4AC9416A7433C0081F27B /* ZCLIEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLIEventHandler.h; sourceTree = "<group>"; };
+		D4B4AC9516A7433C0081F27B /* ZCLIEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLIEventHandler.m; sourceTree = "<group>"; };
+		D4B4AC9C16A747C30081F27B /* ZProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZProtocols.h; sourceTree = "<group>"; };
 		D4FD976616A5D11400311D59 /* Notifly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notifly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FD976A16A5D11400311D59 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D4FD976D16A5D11400311D59 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -49,8 +66,8 @@
 		D4FD978016A5D11400311D59 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/App.xib; sourceTree = "<group>"; };
 		D4FD978D16A5DB3F00311D59 /* ZURLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZURLUtils.h; sourceTree = "<group>"; };
 		D4FD978E16A5DB3F00311D59 /* ZURLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZURLUtils.m; sourceTree = "<group>"; };
-		D4FD979616A5E22B00311D59 /* ZEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEventHandler.h; sourceTree = "<group>"; };
-		D4FD979716A5E22B00311D59 /* ZEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEventHandler.m; sourceTree = "<group>"; };
+		D4FD979616A5E22B00311D59 /* ZURLEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZURLEventHandler.h; sourceTree = "<group>"; };
+		D4FD979716A5E22B00311D59 /* ZURLEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZURLEventHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				D4FD976A16A5D11400311D59 /* Cocoa.framework */,
+				D4B4AC7B16A7183D0081F27B /* Foundation.framework */,
 				D4FD976C16A5D11400311D59 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -147,6 +165,7 @@
 				D4858C4316A60FF8003DD16F /* JSONKit.m */,
 				9D40FA8716A6635E001D99EE /* ZConstants.h */,
 				9D40FA8816A6635E001D99EE /* ZConstants.m */,
+				D4B4AC9C16A747C30081F27B /* ZProtocols.h */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -154,10 +173,12 @@
 		D4FD979416A5E1E300311D59 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
-				D4FD979616A5E22B00311D59 /* ZEventHandler.h */,
-				D4FD979716A5E22B00311D59 /* ZEventHandler.m */,
+				D4FD979616A5E22B00311D59 /* ZURLEventHandler.h */,
+				D4FD979716A5E22B00311D59 /* ZURLEventHandler.m */,
 				D494883E16A5E65B00FC6FAD /* ZNotificationHandler.h */,
 				D494883F16A5E65B00FC6FAD /* ZNotificationHandler.m */,
+				D4B4AC9416A7433C0081F27B /* ZCLIEventHandler.h */,
+				D4B4AC9516A7433C0081F27B /* ZCLIEventHandler.m */,
 			);
 			name = Handlers;
 			sourceTree = "<group>";
@@ -172,6 +193,7 @@
 				D4FD976216A5D11400311D59 /* Sources */,
 				D4FD976316A5D11400311D59 /* Frameworks */,
 				D4FD976416A5D11400311D59 /* Resources */,
+				D4B4AC8D16A719CF0081F27B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -232,11 +254,12 @@
 				D4FD977716A5D11400311D59 /* main.m in Sources */,
 				D4FD977E16A5D11400311D59 /* ZAppDelegate.m in Sources */,
 				D4FD978F16A5DB3F00311D59 /* ZURLUtils.m in Sources */,
-				D4FD979816A5E22B00311D59 /* ZEventHandler.m in Sources */,
+				D4FD979816A5E22B00311D59 /* ZURLEventHandler.m in Sources */,
 				D494883C16A5E5C900FC6FAD /* ZURLEvent.m in Sources */,
 				D494884016A5E65B00FC6FAD /* ZNotificationHandler.m in Sources */,
 				D4858C4416A60FF8003DD16F /* JSONKit.m in Sources */,
 				9D40FA8916A6635E001D99EE /* ZConstants.m in Sources */,
+				D4B4AC9616A7433C0081F27B /* ZCLIEventHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

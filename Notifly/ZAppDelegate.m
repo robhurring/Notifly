@@ -8,28 +8,50 @@
 
 #import "ZAppDelegate.h"
 #import "ZURLEvent.h"
+#import "ZCLIEventHandler.h"
+#import "ZURLEventHandler.h"
 
-@interface ZAppDelegate()
+@interface ZAppDelegate ()
+@property (assign) BOOL cliMode;
+@property (retain) NSDictionary *args;
+
+- (void)printUsage;
+- (void)parseArgs;
 - (void)attachMenu;
 - (void)detachMenu;
 @end
 
 @implementation ZAppDelegate
-@synthesize mainMenu, statusItem, eventController;
+@synthesize mainMenu, statusItem, eventHandler, cliMode;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [self attachMenu];
-    self.notificationController = [[ZNotificationHandler alloc]
+    self.notificationHandler = [[ZNotificationHandler alloc]
                                    initWithDelegate:self];
-    self.eventController = [ZEventHandler initialize];
-    self.eventController.delegate = self;
+
+    [self parseArgs];
+    cliMode = (self.args.count > 0);
+    
+    if(!self.cliMode)
+    {
+        self.eventHandler = [[ZURLEventHandler alloc] initWithDelegate:self userInfo:nil];
+        [self attachMenu];
+    }else{
+        self.eventHandler = [[ZCLIEventHandler alloc] initWithDelegate:self userInfo:self.args];
+    }
+    
+    [eventHandler start];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification
 {
-    [self detachMenu];
+    if(!self.cliMode)
+    {        
+        [self detachMenu];
+    }
 }
+
+#pragma mark Cocoa
 
 - (void)attachMenu
 {
@@ -52,17 +74,88 @@
     [[NSStatusBar systemStatusBar] removeStatusItem:statusItem];
 }
 
+#pragma mark CLI
+
+- (void)printUsage
+{
+    printf("notifly\n\n" \
+        "Usage: notifly -event [publish|list|remove] [event-options]\n\n" \
+           
+        "Publish Events - publish user notification to the notification center\n" \
+           "\t-title VALUE\tTitle of the notification\n" \
+           "\t-subtitle VALUE\tSubtitle of the notification (optional)\n" \
+           "\t-message VALUE\tNotification message body\n" \
+           "\t-channel VALUE\tChannel for notification grouping (optional)\n"\
+           
+        "\nList Events - output JSON list of all notifications to stdout\n" \
+           "\t-channel VALUE\tList only notifications in this channel (optional)\n" \
+           "\t\t\tIf left blank all notifications will be listed.\n" \
+           
+        "\nRemove Events - remove notifications from the notification center\n" \
+           "\t-channel VALUE\tRemove only notifications in this channel (optional)\n" \
+           "\t\t\tIf left blank all notifications will be removed.\n" \
+           "\n"
+    );
+    
+    exit(1);
+}
+
+- (void)parseArgs
+{
+    NSArray *valueArgs = @[
+        @"event",
+        @"title",
+        @"subtitle",
+        @"message",
+        @"channel"
+    ];
+    
+    NSUserDefaults *args = [NSUserDefaults standardUserDefaults];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+
+    for(NSString *key in valueArgs)
+    {
+        NSString *value = [args objectForKey:key];
+        
+        if(value)
+        {
+            [dict setObject:value forKey:key];
+        }
+    }
+    
+    self.args = [NSDictionary dictionaryWithDictionary:dict];
+}
+
+- (void)didDeliverNotification:(NSUserNotification *)notification
+{
+    if(cliMode)
+    {
+        exit(0);
+    }
+}
+
 - (void)handleURLEvent:(ZURLEvent *)event
 {
     if([event isPublishEvent])
     {
-        [self.notificationController publishNotificationFromURLEvent:event];
+        [self.notificationHandler publishNotificationFromURLEvent:event];
     }else if ([event isRemoveEvent]){
-        [self.notificationController removeNotificationsFromURLEvent:event];
+        [self.notificationHandler removeNotificationsFromURLEvent:event];
     }else if([event isListEvent]){
-        [self.notificationController listNotificationsFromURLEvent:event];
+        [self.notificationHandler listNotificationsFromURLEvent:event];
     }else{
-        NSLog(@"Unknown event name: %@", event.eventName);
+        NSString *reason = [NSString stringWithFormat:@"Unknown event name: %@", event.eventName];
+        [self handleFailedURLEvent:reason];
+    }
+}
+
+- (void)handleFailedURLEvent:(NSString *)reason
+{
+    if(cliMode)
+    {
+        [self printUsage];
+    }else{
+        NSLog(@"Unknown event name: %@", reason);
     }
 }
 

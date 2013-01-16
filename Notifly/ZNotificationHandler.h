@@ -10,12 +10,16 @@
 
 @class ZURLEvent;
 
+@protocol ZNotificationHandlerDelegate <NSObject>
+- (void)didDeliverNotification:(NSUserNotification *)notification;
+@end
+
 @interface ZNotificationHandler : NSObject <NSUserNotificationCenterDelegate>
 
-@property (retain) id delegate;
+@property (retain) id<ZNotificationHandlerDelegate> delegate;
 @property (retain) NSUserNotificationCenter *notificationCenter;
 
-- (id)initWithDelegate:(id)theDelegate;
+- (id)initWithDelegate:(id<ZNotificationHandlerDelegate>)theDelegate;
 
 #pragma mark Event Hooks
 
