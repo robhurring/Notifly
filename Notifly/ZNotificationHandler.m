@@ -9,7 +9,6 @@
 
 #import "ZNotificationHandler.h"
 #import "ZURLEvent.h"
-#import "JSONKit.h"
 
 @implementation ZNotificationHandler
 @synthesize delegate, notificationCenter;
@@ -164,8 +163,17 @@
         
         [lines addObject:data];
     }
-    
-    printf("%s", [[lines JSONString] UTF8String]);
+  
+  NSError *error;
+  NSData *jsonData = [NSJSONSerialization dataWithJSONObject:lines
+                                                     options:NSJSONWritingPrettyPrinted
+                                                       error:&error];
+  if (! jsonData) {
+    NSLog(@"Got an error: %@", error);
+  } else {
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    printf("%s", [jsonString UTF8String]);
+  }
 }
 
 #pragma mark NSUserNotificationCenterDelegate
